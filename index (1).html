@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FSD Perception Simulator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app"></div>
+<div id="labels"></div>
+<div id="hud">
+  <div id="status"><i></i><span>FSD supervised · manual</span></div>
+  <div id="side">
+    <div><small>Objects detected</small><b id="obj">0</b></div>
+    <div><small>Camera</small><b id="cam">FSD View</b></div>
+    <div><small>Next intersection</small><b id="nav">-</b></div>
+    <div><small>Traffic signal</small><b id="signal">Scanning</b></div>
+  </div>
+  <div id="limit"><span>50</span></div>
+  <div id="speed"><b id="spd">0</b><small>km/h</small></div>
+  <div id="map-panel">
+    <canvas id="map" width="220" height="220" aria-label="Interactive city map"></canvas>
+    <div class="map-footer"><span>LIVE CITY MAP</span><button id="lighting" type="button">Day</button></div>
+    <small id="destination-hint">Click map to set destination</small>
+  </div>
+  <div id="asset-warning" role="status"></div>
+  <div id="warn"></div>
+  <div id="keys">W/S drive · A/D steer · F autopilot · C camera · L day/night · Space emergency brake</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/utils/SkeletonUtils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
